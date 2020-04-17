@@ -7,7 +7,7 @@
 void made_of_array(float*, int);
 void show_array(float*, int);
 float find_average(float*, int);
-void number_of_elements(float*, int, float);
+int number_of_elements(float*, int, float);
 void find_deviation(float* array, int size, float average);
 
 using namespace std;
@@ -54,14 +54,13 @@ void made_of_array(float* array, int size)
 	}
 }
 
-float show_array(float* array, int size)
+void show_array(float* array, int size)
 {
 	cout << "Source array: ";
 	for (int i = 0; i < size; i++)
 	{
 		cout << fixed << setprecision(2) << array[i] << "\t";
 	}
-	return 0;
 }
 
 float find_average(float* array, int size)
