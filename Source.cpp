@@ -8,7 +8,7 @@ void made_of_array(float*, int);
 float show_array(float*, int);
 float find_average(float*, int);
 int number_of_elements(float*, int, float);
-float find_deviation(float* array, int size, float average);
+void find_deviation(float* array, int size, float average);
 
 using namespace std;
 int main()
@@ -31,7 +31,7 @@ int main()
 	}
 	system("cls");
 
-	A = new float[size];     // выделение памяти под массив
+	A = new float[size];     // ГўГ»Г¤ГҐГ«ГҐГ­ГЁГҐ ГЇГ Г¬ГїГІГЁ ГЇГ®Г¤ Г¬Г Г±Г±ГЁГў
 	srand(time(NULL));
 
 	made_of_array(A, size);
@@ -42,7 +42,7 @@ int main()
 	cout << "Number of elements that smaller than average: " << num_elements << endl;
 	find_deviation(A, size, average);
 
-	delete[] A;      // очистка памяти
+	delete[] A;      // Г®Г·ГЁГ±ГІГЄГ  ГЇГ Г¬ГїГІГЁ
 	return 0;
 }
 
@@ -89,7 +89,7 @@ int number_of_elements(float* array, int size, float average)
 	return s;
 }
 
-float find_deviation(float* array, int size, float average)
+void find_deviation(float* array, int size, float average)
 {
 	float min = 2000, deviation;
 	for (int i = 0; i < size; i++)
@@ -101,12 +101,11 @@ float find_deviation(float* array, int size, float average)
 	}
 	if (min != 0)
 	{
-		deviation = fabs((average - min) / min); // формула отклонения 
+		deviation = fabs((average - min) / min); // ГґГ®Г°Г¬ГіГ«Г  Г®ГІГЄГ«Г®Г­ГҐГ­ГЁГї 
 		cout << "Deviation: " << fixed << setprecision(2) << deviation << "%" << endl;
 	}
 	else
 	{
 		cout << "Error" << endl;;
 	}
-	return 0;
 }
