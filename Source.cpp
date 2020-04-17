@@ -5,7 +5,7 @@
 #include <cmath>
 
 void made_of_array(float*, int);
-float show_array(float*, int);
+void show_array(float*, int);
 float find_average(float*, int);
 void number_of_elements(float*, int, float);
 void find_deviation(float* array, int size, float average);
