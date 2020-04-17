@@ -4,7 +4,7 @@
 #include <iomanip>
 #include <cmath>
 
-float made_of_array(float*, int);
+void made_of_array(float*, int);
 float show_array(float*, int);
 float find_average(float*, int);
 int number_of_elements(float*, int, float);
@@ -46,13 +46,12 @@ int main()
 	return 0;
 }
 
-float made_of_array(float* array, int size)
+void made_of_array(float* array, int size)
 {
 	for (int i = 0; i < size; i++)
 	{
 		array[i] = rand() % 3999 + (-1999);
 	}
-	return 0;
 }
 
 float show_array(float* array, int size)
